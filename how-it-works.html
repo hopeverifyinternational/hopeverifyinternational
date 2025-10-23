@@ -22,21 +22,92 @@
     </script>
   </head>
   <body class="antialiased text-slate-800">
-    <header class="border-b bg-white/80 backdrop-blur">
+    <header class="border-b bg-white/80 backdrop-blur sticky top-0 z-50">
       <nav class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
         <a href="./index.html" class="font-semibold flex items-center gap-2">
           <img src="./hopeVerify International Emblem Logo 1.png" alt="Hope Verify International" class="h-8 w-8 object-contain" />
-          <span>Hope Verify International</span>
+          <span class="hidden sm:inline">Hope Verify International</span>
+          <span class="sm:hidden">HVI</span>
         </a>
-        <div class="flex gap-4 text-sm">
-          <a href="./about.html" class="hover:underline">About</a>
-          <a href="./how-it-works.html" class="hover:underline">How It Works</a>
-          <a href="./case-studies.html" class="hover:underline">Case Studies</a>
-          <a href="./directory.html" class="hover:underline">NGO Directory</a>
-          <a href="./blog.html" class="hover:underline">Blog</a>
-          <a href="./contact.html" class="hover:underline">Contact</a>
+        
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex gap-2 text-sm">
+          <a href="./about.html" class="nav-link relative px-4 py-2 rounded-lg transition-all duration-300 hover:bg-blue-50 hover:text-blue-600 hover:shadow-sm group">
+            <span class="relative z-10">About</span>
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+          </a>
+          <a href="./how-it-works.html" class="nav-link relative px-4 py-2 rounded-lg transition-all duration-300 hover:bg-green-50 hover:text-green-600 hover:shadow-sm group">
+            <span class="relative z-10">How It Works</span>
+            <div class="absolute inset-0 bg-gradient-to-r from-green-500 to-green-600 rounded-lg opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+          </a>
+          <a href="./case-studies.html" class="nav-link relative px-4 py-2 rounded-lg transition-all duration-300 hover:bg-purple-50 hover:text-purple-600 hover:shadow-sm group">
+            <span class="relative z-10">Case Studies</span>
+            <div class="absolute inset-0 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+          </a>
+          <a href="./directory.html" class="nav-link relative px-4 py-2 rounded-lg transition-all duration-300 hover:bg-orange-50 hover:text-orange-600 hover:shadow-sm group">
+            <span class="relative z-10">NGO Directory</span>
+            <div class="absolute inset-0 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+          </a>
+          <a href="./blog.html" class="nav-link relative px-4 py-2 rounded-lg transition-all duration-300 hover:bg-pink-50 hover:text-pink-600 hover:shadow-sm group">
+            <span class="relative z-10">Blog</span>
+            <div class="absolute inset-0 bg-gradient-to-r from-pink-500 to-pink-600 rounded-lg opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+          </a>
+          <a href="./contact.html" class="nav-link relative px-4 py-2 rounded-lg transition-all duration-300 hover:bg-red-50 hover:text-red-600 hover:shadow-sm group">
+            <span class="relative z-10">Contact</span>
+            <div class="absolute inset-0 bg-gradient-to-r from-red-500 to-red-600 rounded-lg opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+          </a>
         </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            <path id="close-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" class="hidden"></path>
+          </svg>
+        </button>
       </nav>
+
+      <!-- Mobile Navigation Menu -->
+      <div id="mobile-menu" class="md:hidden bg-white border-t border-gray-200 shadow-lg transform -translate-y-full transition-transform duration-300 ease-in-out">
+        <div class="px-4 py-6 space-y-2">
+          <a href="./about.html" class="mobile-nav-link block px-4 py-3 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all duration-300 border-l-4 border-transparent hover:border-blue-500">
+            <div class="flex items-center gap-3">
+              <div class="w-3 h-3 rounded-full bg-blue-500"></div>
+              <span class="font-medium">About</span>
+            </div>
+          </a>
+          <a href="./how-it-works.html" class="mobile-nav-link block px-4 py-3 rounded-lg text-gray-700 hover:bg-green-50 hover:text-green-600 transition-all duration-300 border-l-4 border-transparent hover:border-green-500">
+            <div class="flex items-center gap-3">
+              <div class="w-3 h-3 rounded-full bg-green-500"></div>
+              <span class="font-medium">How It Works</span>
+            </div>
+          </a>
+          <a href="./case-studies.html" class="mobile-nav-link block px-4 py-3 rounded-lg text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-all duration-300 border-l-4 border-transparent hover:border-purple-500">
+            <div class="flex items-center gap-3">
+              <div class="w-3 h-3 rounded-full bg-purple-500"></div>
+              <span class="font-medium">Case Studies</span>
+            </div>
+          </a>
+          <a href="./directory.html" class="mobile-nav-link block px-4 py-3 rounded-lg text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-all duration-300 border-l-4 border-transparent hover:border-orange-500">
+            <div class="flex items-center gap-3">
+              <div class="w-3 h-3 rounded-full bg-orange-500"></div>
+              <span class="font-medium">NGO Directory</span>
+            </div>
+          </a>
+          <a href="./blog.html" class="mobile-nav-link block px-4 py-3 rounded-lg text-gray-700 hover:bg-pink-50 hover:text-pink-600 transition-all duration-300 border-l-4 border-transparent hover:border-pink-500">
+            <div class="flex items-center gap-3">
+              <div class="w-3 h-3 rounded-full bg-pink-500"></div>
+              <span class="font-medium">Blog</span>
+            </div>
+          </a>
+          <a href="./contact.html" class="mobile-nav-link block px-4 py-3 rounded-lg text-gray-700 hover:bg-red-50 hover:text-red-600 transition-all duration-300 border-l-4 border-transparent hover:border-red-500">
+            <div class="flex items-center gap-3">
+              <div class="w-3 h-3 rounded-full bg-red-500"></div>
+              <span class="font-medium">Contact</span>
+            </div>
+          </a>
+        </div>
+      </div>
     </header>
     <main class="max-w-6xl mx-auto px-4 py-10 space-y-6">
       <h1 class="text-3xl font-semibold">How It Works</h1>
@@ -55,7 +126,73 @@
         <a aria-label="Instagram" href="https://www.instagram.com/hopeverifyinternational" target="_blank" class="text-slate-500 hover:text-primary"><i class="fab fa-instagram"></i></a>
       </div>
     </div></footer>
-    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+      
+      // Mobile Menu - Bulletproof Solution
+      function initMobileMenu() {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const closeIcon = document.getElementById('close-icon');
+        
+        if (!mobileMenuButton || !mobileMenu) return;
+        
+        // Force initial state
+        mobileMenu.style.display = 'none';
+        if (menuIcon) menuIcon.style.display = 'block';
+        if (closeIcon) closeIcon.style.display = 'none';
+        
+        // Toggle function
+        function toggleMenu() {
+          if (mobileMenu.style.display === 'none') {
+            mobileMenu.style.display = 'block';
+            if (menuIcon) menuIcon.style.display = 'none';
+            if (closeIcon) closeIcon.style.display = 'block';
+          } else {
+            mobileMenu.style.display = 'none';
+            if (menuIcon) menuIcon.style.display = 'block';
+            if (closeIcon) closeIcon.style.display = 'none';
+          }
+        }
+        
+        // Close function
+        function closeMenu() {
+          mobileMenu.style.display = 'none';
+          if (menuIcon) menuIcon.style.display = 'block';
+          if (closeIcon) closeIcon.style.display = 'none';
+        }
+        
+        // Button click
+        mobileMenuButton.onclick = function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          toggleMenu();
+        };
+        
+        // Close on link click
+        const links = document.querySelectorAll('.mobile-nav-link');
+        for (let i = 0; i < links.length; i++) {
+          links[i].onclick = function() {
+            closeMenu();
+          };
+        }
+        
+        // Close on outside click
+        document.onclick = function(e) {
+          if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
+            closeMenu();
+          }
+        };
+      }
+      
+      // Initialize when page loads
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initMobileMenu);
+      } else {
+        initMobileMenu();
+      }
+    </script>
   </body>
   </html>
 
