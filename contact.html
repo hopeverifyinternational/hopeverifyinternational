@@ -3,8 +3,26 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Contact Hope Verify International for general inquiries, verification requests, partnerships, press, or support. We respond within 24–48 hours." />
+    <meta name="robots" content="index,follow" />
     <title>Contact – Hope Verify International</title>
     <link rel="icon" href="./hopeVerify International Emblem Logo 1.png" type="image/png" />
+    <link rel="canonical" href="./contact.html" />
+
+    <!-- Preconnects for performance -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:title" content="Contact – Hope Verify International" />
+    <meta property="og:description" content="Get in touch with Hope Verify International. We respond within 24–48 hours." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="./contact.html" />
+    <meta property="og:image" content="./hopeVerify International Emblem Logo 1.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Contact – Hope Verify International" />
+    <meta name="twitter:description" content="Get in touch with Hope Verify International. We respond within 24–48 hours." />
+    <meta name="twitter:image" content="./hopeVerify International Emblem Logo 1.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -22,12 +40,39 @@
         }
       }
     </script>
+    <!-- Structured Data: ContactPage & Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Contact – Hope Verify International",
+      "url": "./contact.html",
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "Hope Verify International",
+        "url": "./index.html",
+        "logo": "./hopeVerify International Emblem Logo 1.png",
+        "email": "mailto:hopeverifyinternational@gmail.com",
+        "telephone": "+92 345 4454503",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Gujranwala",
+          "addressRegion": "Punjab",
+          "addressCountry": "PK"
+        },
+        "sameAs": [
+          "https://www.facebook.com/profile.php?id=61581285712787",
+          "https://www.instagram.com/hopeverifyinternational"
+        ]
+      }
+    }
+    </script>
   </head>
   <body class="antialiased text-slate-800">
     <header class="border-b bg-white/80 backdrop-blur sticky top-0 z-50">
       <nav class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
         <a href="./index.html" class="font-semibold flex items-center gap-2">
-          <img src="./hopeVerify International Emblem Logo 1.png" alt="Hope Verify International" class="h-8 w-8 object-contain" />
+          <img src="./hopeVerify International Emblem Logo 1.png" alt="Hope Verify International" class="h-8 w-8 object-contain" width="32" height="32" decoding="async" fetchpriority="high" />
           <span class="hidden sm:inline">Hope Verify International</span>
           <span class="sm:hidden">HVI</span>
         </a>
@@ -58,6 +103,7 @@
             <span class="relative z-10">Contact</span>
             <div class="absolute inset-0 bg-gradient-to-r from-red-500 to-red-600 rounded-lg opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
           </a>
+          <a href="./give.html" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-blue-700">GIVE</a>
         </div>
 
         <!-- Mobile Menu Button -->
@@ -108,6 +154,7 @@
               <span class="font-medium">Contact</span>
             </div>
           </a>
+          <a href="./give.html" class="mobile-nav-link block px-4 py-3 rounded-lg text-white bg-primary hover:bg-blue-700 transition-all duration-300 border-l-4 border-transparent">GIVE</a>
         </div>
       </div>
     </header>
@@ -116,11 +163,57 @@
       <div class="grid gap-6 md:grid-cols-3">
         <div class="p-4 border rounded-lg md:col-span-2">
           <h2 class="font-medium">Email us</h2>
-          <form class="mt-3 grid gap-3" onsubmit="event.preventDefault(); alert('Message sent (demo).'); this.reset();">
-            <input class="border rounded px-3 py-2 text-sm" name="name" placeholder="Your name" />
-            <input class="border rounded px-3 py-2 text-sm" name="email" placeholder="Your email" />
-            <textarea class="border rounded px-3 py-2 text-sm" name="message" rows="5" placeholder="Your message"></textarea>
-            <button class="bg-primary text-white text-sm rounded px-4 py-2 w-fit hover:bg-blue-700">Send message</button>
+          <div id="banner-success" class="hidden mt-3 text-sm rounded border border-green-200 bg-green-50 text-green-700 px-4 py-3">Your message has been sent. We'll reply within 24–48 hours.</div>
+          <div id="banner-error" class="hidden mt-3 text-sm rounded border border-red-200 bg-red-50 text-red-700 px-4 py-3">Something went wrong. Please try again.</div>
+          <form id="contact-form" class="mt-3 grid gap-3" action="https://formsubmit.co/hopeverifyinternational@gmail.com" method="POST">
+            <!-- FormSubmit config -->
+            <input type="hidden" name="_subject" value="New message from Hope Verify International" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input id="_next" type="hidden" name="_next" value="./contact.html#success" />
+            <!-- Honeypot: real users won't see/fill this -->
+            <div class="hidden">
+              <label for="company">Company</label>
+              <input id="company" name="company" type="text" tabindex="-1" autocomplete="off" />
+            </div>
+            <div class="grid gap-1">
+              <label for="name" class="text-sm font-medium text-slate-700">Full name</label>
+              <input id="name" class="border rounded px-3 py-2 text-sm" name="name" placeholder="e.g., John Doe" required />
+              <p id="error-name" class="text-xs text-red-600 hidden">Please enter your full name.</p>
+            </div>
+            <div class="grid gap-1">
+              <label for="email" class="text-sm font-medium text-slate-700">Email</label>
+              <input id="email" class="border rounded px-3 py-2 text-sm" type="email" name="email" placeholder="you@example.com" required />
+              <p id="error-email" class="text-xs text-red-600 hidden">Please enter a valid email address.</p>
+            </div>
+            <div class="grid gap-1">
+              <label for="phone" class="text-sm font-medium text-slate-700">Phone (optional)</label>
+              <input id="phone" class="border rounded px-3 py-2 text-sm" type="tel" name="phone" placeholder="+92 3xx xxxxxxx" />
+            </div>
+            <div class="grid gap-1">
+              <label for="subject" class="text-sm font-medium text-slate-700">Subject</label>
+              <input id="subject" class="border rounded px-3 py-2 text-sm" name="subject" placeholder="How can we help?" required />
+              <p id="error-subject" class="text-xs text-red-600 hidden">Please enter a subject.</p>
+            </div>
+            <div class="grid gap-1">
+              <label for="category" class="text-sm font-medium text-slate-700">Category</label>
+              <select id="category" name="category" class="border rounded px-3 py-2 text-sm" required>
+                <option value="" selected disabled>Select a category</option>
+                <option value="general">General inquiry</option>
+                <option value="verification">Verification request</option>
+                <option value="partnership">Partnership</option>
+                <option value="press">Press/Media</option>
+                <option value="support">Support</option>
+              </select>
+              <p id="error-category" class="text-xs text-red-600 hidden">Please select a category.</p>
+            </div>
+            <div class="grid gap-1">
+              <label for="message" class="text-sm font-medium text-slate-700">Message</label>
+              <textarea id="message" class="border rounded px-3 py-2 text-sm" name="message" rows="5" placeholder="Please include as much detail as possible" minlength="10" required></textarea>
+              <p id="error-message" class="text-xs text-red-600 hidden">Message must be at least 10 characters.</p>
+            </div>
+            
+            <button id="contact-submit" class="bg-primary text-white text-sm rounded px-4 py-2 w-fit hover:bg-blue-700" type="submit">Send message</button>
           </form>
         </div>
         <div class="p-4 border rounded-lg">
@@ -157,12 +250,14 @@
                   src="./founder.png" 
                   alt="Mr. Karam Daniel - Founder of Hope Verify International" 
                   class="w-64 h-64 object-cover rounded-2xl shadow-xl border-4 border-white"
+                  width="256" height="256" loading="lazy" decoding="async"
                 />
                 <div class="absolute -bottom-4 -right-4 bg-white rounded-full p-3 shadow-lg">
                   <img 
                     src="./hopeVerify International Emblem Logo 1.png" 
                     alt="Hope Verify International Logo" 
                     class="w-12 h-12 object-contain"
+                    width="48" height="48" loading="lazy" decoding="async"
                   />
                 </div>
               </div>
@@ -202,12 +297,147 @@
     </main>
     <footer class="border-t"><div class="max-w-6xl mx-auto px-4 py-6 text-sm text-slate-500">© <span id="year"></span> Hope Verify International
       <div class="mt-3 flex gap-4 text-xl">
-        <a aria-label="Facebook" href="https://www.facebook.com/profile.php?id=61581285712787" target="_blank" class="text-slate-500 hover:text-primary"><i class="fab fa-facebook"></i></a>
-        <a aria-label="Instagram" href="https://www.instagram.com/hopeverifyinternational" target="_blank" class="text-slate-500 hover:text-primary"><i class="fab fa-instagram"></i></a>
+        <a aria-label="Facebook" href="https://www.facebook.com/profile.php?id=61581285712787" target="_blank" rel="noreferrer" class="text-slate-500 hover:text-primary"><i class="fab fa-facebook"></i></a>
+        <a aria-label="Instagram" href="https://www.instagram.com/hopeverifyinternational" target="_blank" rel="noreferrer" class="text-slate-500 hover:text-primary"><i class="fab fa-instagram"></i></a>
+        <a aria-label="WhatsApp" href="https://wa.me/+923454454503" target="_blank" rel="noreferrer" class="text-slate-500 hover:text-green-600"><i class="fab fa-whatsapp"></i></a>
+        <a aria-label="LinkedIn" href="https://www.linkedin.com/in/hope-verify-international-3535a6387/" target="_blank" rel="noreferrer" class="text-slate-500 hover:text-blue-700"><i class="fab fa-linkedin"></i></a>
       </div>
     </div></footer>
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
+      
+      // Show success banner after redirect from FormSubmit
+      (function(){
+        if (location.hash === '#success') {
+          var bannerSuccess = document.getElementById('banner-success');
+          if (bannerSuccess) bannerSuccess.classList.remove('hidden');
+        }
+      })();
+
+      // Inline validation for contact form
+      (function(){
+        var form = document.getElementById('contact-form');
+        if (!form) return;
+        var submitBtn = document.getElementById('contact-submit');
+        var fields = {
+          name: document.getElementById('name'),
+          email: document.getElementById('email'),
+          subject: document.getElementById('subject'),
+          category: document.getElementById('category'),
+          message: document.getElementById('message')
+        };
+        var errors = {
+          name: document.getElementById('error-name'),
+          email: document.getElementById('error-email'),
+          subject: document.getElementById('error-subject'),
+          category: document.getElementById('error-category'),
+          message: document.getElementById('error-message')
+        };
+
+        function setError(key, show) {
+          if (!errors[key]) return;
+          if (show) {
+            errors[key].classList.remove('hidden');
+            fields[key].classList.add('border-red-500');
+          } else {
+            errors[key].classList.add('hidden');
+            fields[key].classList.remove('border-red-500');
+          }
+        }
+
+        function validateField(key) {
+          var value = (fields[key].value || '').trim();
+          if (key === 'email') {
+            var ok = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value);
+            setError(key, !ok);
+            return ok;
+          }
+          if (key === 'category') {
+            var okCat = !!value;
+            setError(key, !okCat);
+            return okCat;
+          }
+          if (key === 'message') {
+            var okMsg = value.length >= 10;
+            setError(key, !okMsg);
+            return okMsg;
+          }
+          
+          var okDefault = value.length > 0;
+          setError(key, !okDefault);
+          return okDefault;
+        }
+
+        Object.keys(fields).forEach(function(key){
+          fields[key].addEventListener('blur', function(){ validateField(key); });
+          fields[key].addEventListener('input', function(){ if (!errors[key].classList.contains('hidden')) validateField(key); });
+        });
+
+        form.addEventListener('submit', function(e){
+          e.preventDefault();
+          var keys = Object.keys(fields);
+          var allOk = keys.every(function(k){ return validateField(k); });
+          // Honeypot check
+          var honey = document.getElementById('company');
+          if (honey && honey.value && honey.value.trim().length > 0) {
+            return; // silently block
+          }
+          if (!allOk) {
+            return;
+          }
+          var bannerSuccess = document.getElementById('banner-success');
+          var bannerError = document.getElementById('banner-error');
+          if (bannerSuccess) bannerSuccess.classList.add('hidden');
+          if (bannerError) bannerError.classList.add('hidden');
+          var original = submitBtn ? submitBtn.textContent : '';
+          if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Sending...'; }
+
+          var action = form.getAttribute('action');
+          var nextUrl = (document.getElementById('_next') || {}).value || './contact.html#success';
+
+          // Preflight check: ping FormSubmit host; if reachable, submit normally; else mailto fallback
+          var testImg = new Image();
+          var decided = false;
+          var fallback = function(){
+            if (decided) return; decided = true;
+            // Fallback: open prefilled mailto
+            var name = encodeURIComponent(fields.name.value.trim());
+            var email = encodeURIComponent(fields.email.value.trim());
+            var phoneVal = (document.getElementById('phone').value || '').trim();
+            var phone = encodeURIComponent(phoneVal);
+            var subject = encodeURIComponent('Contact: ' + fields.subject.value.trim() + ' [' + fields.category.value + ']');
+            var body = encodeURIComponent('Name: ' + fields.name.value.trim() + '\r\nEmail: ' + fields.email.value.trim() + (phoneVal ? ('\r\nPhone: ' + phoneVal) : '') + '\r\n\r\n' + fields.message.value.trim());
+            window.location.href = 'mailto:hopeverifyinternational@gmail.com?subject=' + subject + '&body=' + body;
+            if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = original; }
+            if (bannerError) bannerError.classList.remove('hidden');
+          };
+          var succeed = function(){
+            if (decided) return; decided = true;
+            // Send in background so the user stays on the site
+            var fdSend = new FormData(form);
+            fetch(action, { method: 'POST', body: fdSend, mode: 'no-cors' })
+              .then(function(){
+                if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = original; }
+                // Show success banner and reset form
+                var bannerSuccess = document.getElementById('banner-success');
+                if (bannerSuccess) bannerSuccess.classList.remove('hidden');
+                var keys = Object.keys(fields);
+                form.reset();
+                keys.forEach(function(k){ setError(k, false); });
+              })
+              .catch(function(){
+                fallback();
+              });
+          };
+          // If host is reachable, loading their favicon should succeed
+          testImg.onload = succeed;
+          testImg.onerror = fallback;
+          testImg.src = 'https://formsubmit.co/favicon.ico?_=' + Date.now();
+          // Timeout after 1500ms
+          setTimeout(fallback, 1500);
+        });
+      })();
+
       
       // Mobile Menu - Bulletproof Solution
       function initMobileMenu() {
