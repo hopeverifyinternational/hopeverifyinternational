@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Give – Hope Verify International</title>
+    <meta name="description" content="Support Hope Verify International. Find bank details and ways to donate or contact us for giving." />
+    <link rel="icon" href="./hopeVerify International Emblem Logo 1.png" type="image/png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: '#1e40af', secondary: '#059669', accent: '#dc2626' }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body class="antialiased text-slate-800">
+    <header class="border-b bg-white/80 backdrop-blur sticky top-0 z-50">
+      <nav class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+        <a href="./index.html" class="font-semibold flex items-center gap-2">
+          <img src="./hopeVerify International Emblem Logo 1.png" alt="Hope Verify International" class="h-8 w-8 object-contain" />
+          <span class="hidden sm:inline">Hope Verify International</span>
+          <span class="sm:hidden">HVI</span>
+        </a>
+        <div class="hidden md:flex gap-2 text-sm">
+          <a href="./about.html" class="nav-link relative px-4 py-2 rounded-lg transition-all duration-300 hover:bg-blue-50 hover:text-blue-600 hover:shadow-sm">About</a>
+          <a href="./how-it-works.html" class="nav-link relative px-4 py-2 rounded-lg transition-all duration-300 hover:bg-green-50 hover:text-green-600 hover:shadow-sm">How It Works</a>
+          <a href="./case-studies.html" class="nav-link relative px-4 py-2 rounded-lg transition-all duration-300 hover:bg-purple-50 hover:text-purple-600 hover:shadow-sm">Case Studies</a>
+          <a href="./directory.html" class="nav-link relative px-4 py-2 rounded-lg transition-all duration-300 hover:bg-orange-50 hover:text-orange-600 hover:shadow-sm">NGO Directory</a>
+          <a href="./blog.html" class="nav-link relative px-4 py-2 rounded-lg transition-all duration-300 hover:bg-pink-50 hover:text-pink-600 hover:shadow-sm">Blog</a>
+          <a href="./contact.html" class="nav-link relative px-4 py-2 rounded-lg transition-all duration-300 hover:bg-red-50 hover:text-red-600 hover:shadow-sm">Contact</a>
+          <a href="./give.html" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-blue-700">GIVE</a>
+        </div>
+        <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            <path id="close-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" class="hidden"></path>
+          </svg>
+        </button>
+      </nav>
+      <div id="mobile-menu" class="md:hidden bg-white border-t border-gray-200 shadow-lg absolute top-full left-0 right-0 transform -translate-y-full opacity-0 transition-all duration-300 ease-in-out pointer-events-none">
+        <div class="px-4 py-6 space-y-2">
+          <a href="./about.html" class="mobile-nav-link block px-4 py-3 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all duration-300 border-l-4 border-transparent hover:border-blue-500">About</a>
+          <a href="./how-it-works.html" class="mobile-nav-link block px-4 py-3 rounded-lg text-gray-700 hover:bg-green-50 hover:text-green-600 transition-all duration-300 border-l-4 border-transparent hover:border-green-500">How It Works</a>
+          <a href="./case-studies.html" class="mobile-nav-link block px-4 py-3 rounded-lg text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-all duration-300 border-l-4 border-transparent hover:border-purple-500">Case Studies</a>
+          <a href="./directory.html" class="mobile-nav-link block px-4 py-3 rounded-lg text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-all duration-300 border-l-4 border-transparent hover:border-orange-500">NGO Directory</a>
+          <a href="./blog.html" class="mobile-nav-link block px-4 py-3 rounded-lg text-gray-700 hover:bg-pink-50 hover:text-pink-600 transition-all duration-300 border-l-4 border-transparent hover:border-pink-500">Blog</a>
+          <a href="./contact.html" class="mobile-nav-link block px-4 py-3 rounded-lg text-gray-700 hover:bg-red-50 hover:text-red-600 transition-all duration-300 border-l-4 border-transparent hover:border-red-500">Contact</a>
+          <a href="./give.html" class="mobile-nav-link block px-4 py-3 rounded-lg text-white bg-primary hover:bg-blue-700 transition-all duration-300 border-l-4 border-transparent">GIVE</a>
+        </div>
+      </div>
+    </header>
+    <main class="max-w-6xl mx-auto px-4 py-10 space-y-6">
+      <h1 class="text-3xl font-semibold">Give</h1>
+      <p class="text-slate-600">Your generosity helps us verify NGOs, protect donors, and deliver real impact to communities in need.</p>
+
+      <div class="grid gap-6 md:grid-cols-2">
+        <div class="p-4 border rounded-lg">
+          <h2 class="font-medium">Bank Transfer (PK)</h2>
+          <div class="mt-3 text-sm text-slate-700 space-y-1">
+            <div><span class="font-medium">Account Title:</span> Hope Verify International</div>
+            <div><span class="font-medium">Account Number:</span> 1234-5678901</div>
+            <div><span class="font-medium">IBAN:</span> PK00ABCD0000001234567890</div>
+            <div><span class="font-medium">Bank:</span> Bank Pakistan</div>
+            <div><span class="font-medium">Branch Code:</span> 0123</div>
+            <div><span class="font-medium">SWIFT/BIC:</span> EXAMPKKA</div>
+          </div>
+          <p class="text-xs text-slate-500 mt-3">Note: Replace with your real bank details when ready.</p>
+        </div>
+        <div class="p-4 border rounded-lg">
+          <h2 class="font-medium">International Transfers</h2>
+          <p class="text-sm text-slate-700 mt-3">For international donations, please contact us so we can provide the most suitable channel (SWIFT details, intermediary bank, or a partner account).</p>
+          <div class="mt-3 text-sm">
+            <a href="mailto:hopeverifyinternational@gmail.com" class="text-blue-600">hopeverifyinternational@gmail.com</a><br/>
+            <a href="tel:+923454454503" class="text-blue-600">+92 345 4454503</a><br/>
+            <a href="https://wa.me/+923454454503" target="_blank" rel="noreferrer" class="text-green-600">Chat on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-4 border rounded-lg">
+        <h2 class="font-medium">Receipts & Reporting</h2>
+        <p class="text-sm text-slate-700 mt-2">Email your transaction slip to <a href="mailto:hopeverifyinternational@gmail.com" class="text-blue-600">hopeverifyinternational@gmail.com</a> with your name and purpose of donation. We will acknowledge within 24–48 hours and share verified impact reports as applicable.</p>
+      </div>
+
+      <div class="p-4 border rounded-lg">
+        <h2 class="font-medium">Other Ways to Give</h2>
+        <ul class="text-sm text-slate-700 list-disc pl-5 mt-2">
+          <li>Corporate/partner funding</li>
+          <li>In‑kind donations (equipment, supplies)</li>
+          <li>Recurring monthly support</li>
+        </ul>
+      </div>
+    </main>
+    <footer class="border-t"><div class="max-w-6xl mx-auto px-4 py-6 text-sm text-slate-500">© <span id="year"></span> Hope Verify International
+      <div class="mt-3 flex gap-4 text-xl">
+        <a aria-label="Facebook" href="https://www.facebook.com/profile.php?id=61581285712787" target="_blank" rel="noreferrer" class="text-slate-500 hover:text-primary"><i class="fab fa-facebook"></i></a>
+        <a aria-label="Instagram" href="https://www.instagram.com/hopeverifyinternational" target="_blank" rel="noreferrer" class="text-slate-500 hover:text-primary"><i class="fab fa-instagram"></i></a>
+        <a aria-label="WhatsApp" href="https://wa.me/+923454454503" target="_blank" rel="noreferrer" class="text-slate-500 hover:text-green-600"><i class="fab fa-whatsapp"></i></a>
+        <a aria-label="LinkedIn" href="https://www.linkedin.com/in/hope-verify-international-3535a6387/" target="_blank" rel="noreferrer" class="text-slate-500 hover:text-blue-700"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div></footer>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+      function initMobileMenu() {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const closeIcon = document.getElementById('close-icon');
+        if (!mobileMenuButton || !mobileMenu) return;
+        mobileMenu.style.display = 'none';
+        if (menuIcon) menuIcon.style.display = 'block';
+        if (closeIcon) closeIcon.style.display = 'none';
+        function toggleMenu() {
+          if (mobileMenu.style.display === 'none') {
+            mobileMenu.style.display = 'block';
+            if (menuIcon) menuIcon.style.display = 'none';
+            if (closeIcon) closeIcon.style.display = 'block';
+          } else {
+            mobileMenu.style.display = 'none';
+            if (menuIcon) menuIcon.style.display = 'block';
+            if (closeIcon) closeIcon.style.display = 'none';
+          }
+        }
+        function closeMenu() {
+          mobileMenu.style.display = 'none';
+          if (menuIcon) menuIcon.style.display = 'block';
+          if (closeIcon) closeIcon.style.display = 'none';
+        }
+        mobileMenuButton.onclick = function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          toggleMenu();
+        };
+        const links = document.querySelectorAll('.mobile-nav-link');
+        for (let i = 0; i < links.length; i++) {
+          links[i].onclick = function() { closeMenu(); };
+        }
+        document.onclick = function(e) {
+          if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
+            closeMenu();
+          }
+        };
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initMobileMenu);
+      } else {
+        initMobileMenu();
+      }
+    </script>
+  </body>
+  </html>
+
+
